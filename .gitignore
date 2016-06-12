@@ -1,1 +1,8 @@
 /bin/
+
+# Eclipse
+.settings
+.classpath
+.project
+.cache-main
+.cache-tests
