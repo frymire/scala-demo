@@ -1,5 +1,7 @@
 
 // Note that Scala's built-in JSON parser is reported to be relatively slow.
+package files
+
 import util.parsing.json.{JSONObject, JSONArray, JSON}
 
 object JSONDemo extends App {
@@ -25,7 +27,7 @@ object JSONDemo extends App {
   // reference the obj member (a Map[String, Any]) in JSONObject or the list member (a List[Any]) in JSONArray  
   //println( jObject1("hello") ) // compile-time error
   println( jObject1.obj("hello") )
-  // println( jObj.obj("goodbye") ) // key not found error
+  // println( jObject1.obj("goodbye") ) // key not found error
   println( jObject1.obj.get("goodbye") ) // None
   println( jObject1.obj.get("Romo") ) // Some(sucks)
   //println( jArray1(1) ) // compile-time error
@@ -46,4 +48,4 @@ object JSONDemo extends App {
   println( jsonToMap(jsonObjectString) )
   println( jsonToList(jsonArrayString) )
     
-} // JSONDemo
+} 
