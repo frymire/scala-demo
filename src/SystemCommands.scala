@@ -21,11 +21,11 @@ object SystemCommands extends App {
   "powershell -Command ls".!
   
   // Execute a bat file.
-  "dir.bat" !
+  "resources/dir.bat" !
   
   // Redirect the output to a file. Note that you have to put the ! command at the end.
   val file = new java.io.File("System Command Demo.txt")
-  "dir.bat" #> file !
+  "resources/dir.bat" #> file !
   
   // Append to a file
   "mongo --help" #>> file !
@@ -36,7 +36,7 @@ object SystemCommands extends App {
   
   // Open a webpage.
   """powershell -Command "start chrome 'www.dac.us'" """".!
-  """powershell -Command "start chrome 'C:/Users/mark.e.frymire/Dropbox/Personal/Humor/'" """".!
-  """powershell -Command "start chrome 'file:///C:/Users/mark.e.frymire/Dropbox/Personal/Humor/Santa%20Claus%20Tombstone.jpg'" """".!      
+  """powershell -Command "start chrome 'D:/OneDrive/Personal/Humor/'" """".!
+  """powershell -Command "start chrome 'file:///D:/OneDrive/Personal/Humor/Santa%20Claus%20Tombstone.jpg'" """".!      
   
 }

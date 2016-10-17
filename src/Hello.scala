@@ -1,7 +1,4 @@
 
-
-object Hello extends App {
-  
-  println("Hello, cruel world.")
-
+object Hello extends App {  
+  println("Hi, cruel world.")
 }
