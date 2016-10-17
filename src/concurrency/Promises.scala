@@ -1,5 +1,5 @@
 
-package actordemos
+package concurrency
 
 import concurrent.{Await, Future, future, promise}
 import concurrent.duration._

@@ -1,5 +1,5 @@
 
-package actordemos
+package concurrency
 
 import util.{Success, Failure}
 import concurrent.{Await, future}
