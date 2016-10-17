@@ -16,6 +16,6 @@ object DirectoryListing extends App {
     
   }
 
-  getAllSubDirs( new File("D:/OneDrive/Mars") ) foreach println
+  getAllSubDirs( new File("D:/OneDrive") ) foreach println
 
 }

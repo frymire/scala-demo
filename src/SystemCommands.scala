@@ -32,7 +32,7 @@ object SystemCommands extends App {
   
   // Execute a PowerShell script.
   println("\nRunning a PowerShell script.")
-  """powershell -Command ".\FindDIR.ps1" """".!
+  """powershell -Command "resources/dir.ps1" """".!
   
   // Open a webpage.
   """powershell -Command "start chrome 'www.dac.us'" """".!
