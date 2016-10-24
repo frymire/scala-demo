@@ -1,5 +1,4 @@
 
-
 package regex
 
 import java.io.{File, PrintWriter, FileWriter}
@@ -35,8 +34,7 @@ object AbstractParser {
     // TODO: Extract full names on one line (i.e. "Mark Edward Frymire")
     
     // Set up a regular expression to extract names.
-    // TODO: It's a hack to put "´" in here explicitly, but it wouldn't work otherwise.
-    val nameExtractor = """([\p{Lu}][\p{L}´\-]+) (\p{Lu}\.)? ?([\p{Lu}][\p{L}´\-]+)( III)?""".r
+    val nameExtractor = """([\p{Lu}][\p{L}\-]+) (\p{Lu}\.)? ?([\p{Lu}][\p{L}\-]+)( III)?""".r
     
     // Find all of the matches in the input line, and return an array of the last token and suffix of each
     val names = nameExtractor findAllIn line
