@@ -13,24 +13,20 @@ object ColorPrinter {
 }
 
 
-object Enumeration {
+object Enumeration extends App {
 
-  def main(args: Array[String]) {
-    
-    //import ColorPrinter.Colors._ // Could do this and just say "Yellow" and "values" below.
-    
-    ColorPrinter.test(ColorPrinter.Colors.Red)
+  import ColorPrinter.Colors
+  
+  ColorPrinter.test(Colors.Red)
 
-    (new ColorPrinter(ColorPrinter.Colors.Yellow)).printColor      
-    
-    println; 
-    for (c <- ColorPrinter.Colors.values) yield println(c.id + " " + c)
-    
-    println; 
-    for (i <- 0 until ColorPrinter.Colors.maxId) println( ColorPrinter.Colors(i) )
-    
-    println("\n" + (ColorPrinter.Colors withName "Green") )
+  (new ColorPrinter(Colors.Yellow)).printColor      
+  
+  println
+  for (c <- Colors.values) yield println(c.id + " " + c)
+  
+  println 
+  for (i <- 0 until Colors.maxId) println(Colors(i))
+  
+  println("\n" + (Colors withName "Green") )
         
-  }
-
 }

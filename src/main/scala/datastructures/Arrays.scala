@@ -42,6 +42,11 @@ object Arrays {
 	val t2 = Array(1,2,3,4,5)	
 	t2.sliding(2) foreach { x => println(x(0) + "\t" + x(1)) }
 	
+	val t3 = t2 map {_ + 1}
+	println("t3")
+	println(t3 mkString " ")
+	println(t3 sum)
+	
 	
 	// Deep copy
 	val t4 = Array(1,2,3)
