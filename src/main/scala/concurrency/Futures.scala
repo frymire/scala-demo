@@ -74,4 +74,10 @@ object Futures extends App {
   
   println("\nLet previous futures complete before terminating....")
   List(withCallbacks, multiCallback, mapped, highestValue) foreach { Await.result(_, Duration.Inf) }
+  
+  // Other capabilities:
+  // myFuture.collect() is like a map, but applies a partial function to the results of an input future 
+  // myFuture.recover() and .recoverWith() let you specify behavior when the future returns specific error types
+  // myFuture.fallbackTo() lets you specify an alternate future to be applied if myFuture fails 
+  // myFuture.andThen() provides syntax that allows you to ensure that callback are executed in a particular order
 }
