@@ -27,9 +27,9 @@ object Arrays {
     val v2 = v1.updated(2, 4)
     println(v2 mkString " ")
 
-    // Print all of the permutations and combinations
-    println
+    println("\nPrint all permutations...")
     for (permutation <- v2.permutations) println(permutation.mkString(" "))
+    println("\nPrint all combinations...")
     for (i <- 0 to v2.length; combination <- v2.combinations(i)) println(combination.mkString(" "))
     
     // The deep method in ArrayLike creates nested sequences, so we can apply a method to embedded Sequences
